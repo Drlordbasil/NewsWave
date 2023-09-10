@@ -88,8 +88,9 @@ class NewsAggregator:
             print(f"   Date: {article['date']}")
             print(f"   URL: {article['url']}")
             print()
-        
-        option = input("Enter the number of the article to bookmark (0 to skip): ")
+
+        option = input(
+            "Enter the number of the article to bookmark (0 to skip): ")
         if option != '0':
             article_index = int(option) - 1
             self.bookmark_article(news_articles[article_index])
@@ -130,7 +131,8 @@ class NewsAggregator:
                 print(f"   URL: {article['url']}")
                 print()
 
-            option = input("Enter the number of the article to remove (0 to skip): ")
+            option = input(
+                "Enter the number of the article to remove (0 to skip): ")
             if option != '0':
                 article_index = int(option) - 1
                 del self.bookmarked_articles[article_index]
